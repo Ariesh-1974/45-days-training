@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Task Tracker</title>
+        
+        <style>
+            h1{
+                background-image: url('https://images.alphacoders.com/114/1146731.jpg ');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color:white;
+                /* background-color: black; */
+                padding-top: 10px;
+                padding-left: 8px;
+                padding-bottom: 10px;
+                font-size: 15px;
+                border: 2px solid gray;
+            }
+            .in{
+                background-color:white;
+                color:black;
+                padding-left: 30px;
+                padding-top:20px;
+                padding-bottom: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .in input{
+                width: 200%;
+                height: 30px;
+                padding-left:20px;
+                padding-right:10px ;
+                border-radius: 20px;
+            }
+            .in img{
+                padding-left: 185px;
+                padding-top:;
+            }
+            table{
+                padding-top: 20px;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid BLACK;
+                text-align: center;
+                padding: 3px;
+            }
+            th {
+                color:black;
+                /* background-color:darkgray; */
+            }
+            td{
+                color:BLACK;
+                background-color:white ;
+            }
+            button{
+                height: 30px;
+                border-radius: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            body{
+                background-color: white;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            img{
+                width: 450px;
+                height: 250px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>TASK TRACKER</h1>
+        <section class="in">
+            
+            <div>
+                <label for="Name">Employee Name:</label><br><br>
+                <input type="text" id="Name" placeholder="Deepan v"><br><br>
+                <label for="task_title">Task Title:</label><br><br>
+                <input type="text" id="task_title" placeholder="task title"><br><br>
+                <label for="task_d">Task Description:</label><br><br>
+                <input type="textarea" id="task_d" placeholder="explain about your task"><br><br>
+                <label for="due">Due Date:</label><br><br>
+                <input type="date" id="due"><br><br><br>
+                <button onclick="alert('clicked')">submit</button>
+            </div>
+            <img src="https://img.freepik.com/premium-vector/freelancing-outsourcing-thin-line-illustration-coworkers-communicating-online-outline-characters-white-background-internet-job-distance-communication-technology-simple-style-drawing_151150-2394.jpg"><br>
+        </section>
+        <h1>TASK TABLE</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Employee Name</th>
+                    <th colspan="2">Task Detail</th>
+                    <th rowspan="2">Due Date</th>
+                </tr>
+                <tr>
+                    <th>Task Title</th>
+                    <th>Task Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ariesh</td>
+                    <td>Employee Task Tracker</td>
+                    <td><p>Create an Employee Task Tracker using HTML. The task should demonstrate proficiency with tables, forms, and HTML structure.</p></td>
+                    <td>26-12-2024</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+    <script>
+        document.querySelector('button').addEventListener('click', addTask);
+        function addTask() {
+            const name = document.getElementById('Name').value.trim();
+            const title = document.getElementById('task_title').value.trim();
+            const description = document.getElementById('task_d').value.trim();
+            const dueDate = document.getElementById('due').value;
+            if (!name || !title || !description || !dueDate) {
+                alert('Please fill in all fields before submitting.');
+                return;
+            }
+            const task = { name, title, description, dueDate };
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            addTaskToTable(task);
+            document.getElementById('Name').value = '';
+            document.getElementById('task_title').value = '';
+            document.getElementById('task_d').value = '';
+            document.getElementById('due').value = '';
+        }
+        function addTaskToTable(task) {
+            const tableBody = document.querySelector('tbody');
+            const newRow = document.createElement('tr');
+            newRow.innerHTML = `
+                <td>${task.name}</td>
+                <td>${task.title}</td>
+                <td>${task.description}</td>
+                <td>${task.dueDate}</td>
+            `;
+            tableBody.appendChild(newRow);
+        }
+        window.onload = function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(addTaskToTable);
+        };
+    </script>
+</html>

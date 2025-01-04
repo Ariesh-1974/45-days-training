@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <titl>Golf Play</titl>
         <link rel="stylesheet" href="day_5.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
     <body>
         <div class="body">
@@ -10,17 +10,17 @@
                 <p>logo</p>
                 <nav>
                     <ul>
-                        <li><a id="H">Home</a></li>
-                        <li><a id="A">About</a></li>
-                        <li><a id="M">Membership</a></li>
-                        <li><a id="E">Event</a></li>
-                        <li><a id="C">Contact us</a></li>
-                        <li><a id="P">Pages</a></li>
+                        <li><a href="#H">Home</a></li>
+                        <li><a href="#A">About</a></li>
+                        <li><a href="#M">Membership</a></li>
+                        <li><a href="#E">Event</a></li>
+                        <li><a href="#C">Contact us</a></li>
+                        <li><a href="#P">Pages</a></li>
                         <button id="nav-btn">Member Login</button>
                     </ul>
                 </nav>
             </div>
-            <div class="content">
+            <div id="H" class="content">
                 <div id="we">
                     <h1>Welcome to the Club<br>Tiya is Modern</h1>
                     <button>Our Story</button>
@@ -30,26 +30,27 @@
             <div class="after-content">
                 <h1>About Tiya</h1>
             </div>
-            <h3 class="history">Tiya Club History</h3>
+            
+            <h3 id="A" class="history">Tiya Club History</h3>
             <div class="ac-1">
                 <p>Since 1984, Tiya is ranked #8 in the top 10 golf courses in the world. Tiya is Bootstrap 5 HTML CSS template for golf clubs. Anyone can modify and use this layout for commercial purposes.<br><br>Tiya Golf Club is 100% free CSS template provided by TemplateMo website. Please tell your friends about our website. Thank you for visiting.</p>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG5CPz89vwuDB4H5EsXhkpKz0_koS-0HK0Yg&s">  
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbaZH9133o8FCDNfRnvCm21bRgkOoagJ-_hA&s"> 
             </div>
-            <div class="hyy">
-                <div class="container">
+            <section class="container">
+                <div class="c1">
                     <h2>Get our newsletter</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore et dolore.</p>
-                        <div class="subscribe">
+                    <div class="subscribe">
                         <label for="email"><i class="fa fa-envelope"></i></label>
                         <input type="email" id="email" placeholder="Email address">
                         <button type="submit">Subscribe</button>
                     </div> 
                 </div>
-            </div>
-            <section class="table-content">
-                <h1>Membership at Tiya</h1>
-                <table id="">
+            </section>
+            <h1>Membership at Tiya</h1>
+            <section  class="table-content">
+                <table id="table">
                     <thead >
                     <tr>
                         <th>Yearly Access</th>
@@ -60,44 +61,173 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Golf Insurance</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>Golf Insurance</th>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                        </tr>
+                        <tr id="cl">
+                            <td>Club Facilities</th>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
                         </tr>
                         <tr>
-                            <th>Club Facilities</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>Country Club</td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                        </tr>
+                        <tr id="cl">
+                            <td>Weekend Seasonal</td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
                         </tr>
                         <tr>
-                            <th>Country Club</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                            <td>Premium Courses</td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
                         </tr>
-                        <tr>
-                            <th>Weekend Seasonal</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <th>Premium Courses</th>
-                            <th><i class="bi-check-circle-fill"></i></th>
-                            <th></th>
-                            <th></th>
-                        </tr>
-                        <tr>
-                            <th>Pro's Networking</th>
-                            <th></th>
-                            <th></th>
-                            <th></th>
+                        <tr id="cl">
+                            <td>Pro's Networking</td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="xmark" class="fa-solid fa-circle-xmark"></i></td>
+                            <td><i id="check" class="fa-solid fa-circle-check"></i></td>
                         </tr>
                     </tbody>
                 </table>
+                <div id="M" class="information">
+                    <label for="text">Full Name</label><br><br>
+                    <input type="text"  placeholder="Enter Name"><br><br>
+                    <label for="email">Email Address</label><br><br>
+                    <input type="email"  placeholder="Enter email"><br><br>
+                    <label for="texti">Comments</label><br><br>
+                    <input type="textarea"  placeholder="Explination"><br><br><BR>
+                    <button type="submit">Submit</button>
+                </div> 
             </section>
+            <section id="E" class="upcoming">
+                <div class="title">
+                    <h3>Upcoming Events</h3>
+                </div>
+            <div class="unm-1">   
+                <h1>24 feb 2048</h1>  
+                <img src="https://t4.ftcdn.net/jpg/00/70/87/43/360_F_70874391_2WuvTi81u1WE10BOIOa4wvYB5RFOkaFd.jpg">
+                <div id="fuu" >
+                    <h3>Private activities</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor<br> incididunt ut labore et dolore magna aliqua.</p>
+                    <hr>
+                    <div class="eee">
+                        <p>Location:National Center,NYC
+                            <br>Ticket:$250</p>
+                        <button>Buy ticket</button>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="unm-2">
+                <h1>28 feb 2048</h1>
+                <img src="https://img.freepik.com/free-photo/full-shot-golf-players-field_23-2148295316.jpg">
+                <div>
+                <h3>Group tournament activities</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <br>incididunt ut labore et dolore magna aliqua.</p>
+                <hr>
+                    <div class="eee">
+                        <p>Location:National Center, NYC
+                            <br> Ticket:$350</p>
+                        <button>Buy ticket</button>
+                    </div>
+                </div>
+            </div>
+            </section>
+            <section id="C  " class="footer">
+                <div class="contact-form">
+                    <h1>Contact Tiya</h1>
+                    <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email address" required/>
+                    </div>
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                    <button type="submit">Submit Form</button> 
+                </div>
+                <div>
+                    <img src="https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/WorldMap.svg">
+                </div>
+            </section>
+            <section class="footer-2">
+                <div>
+                    <h1>logo</h1>
+                </div>
+                <div class="space">
+                    <div class="spa">
+                        <h3>Join Us</h3>
+                    </div>
+                    <p>Mon-Fri 6:00 AM - 6:00 PM</p>
+                    <hr>
+                    <p>Sat-Sun 6:30 AM - 8:30 PM</p><br><br>
+                    <p>Copyright © 2048 Tiya Golf<br> Club</p>
+                </div>
+                <div >
+                    <br><br>
+                    <div class="spa">
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>    
+                    <h4>Design:</h4>
+                    <p>TemplateMo</p>
+                </div>
+            </section>
+            <section class="hello">
+            <div class="map">
+                <p>London, United Kingdom
+                    <br>(020) 010-020-0340
+                    <br>info@company.com</p>
+            </div>
+            <div class="maps">
+            <button>Direction</button>
         </div>
-    </body>    
+    </section>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#81B29A" fill-opacity="1" d="M0,224L34.3,192C68.6,160,137,96,206,90.7C274.3,85,343,139,411,144C480,149,549,107,617,122.7C685.7,139,754,213,823,240C891.4,267,960,245,1029,224C1097.1,203,1166,181,1234,160C1302.9,139,1371,117,1406,106.7L1440,96L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        </div>
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" id="close-btn">&times;</span>
+                <h2>Member Login</h2>
+                <label for="membership">Membership No.</label>
+                <input type="text" id="membership" placeholder="Membership No.">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <div>
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Remember me</label>
+                </div>
+                <button id="login-btn">Login</button>
+                <a href="#">Forgotten password?</a>
+            </div>
+        </div>
+    </body>
+    <script>
+    const loginBtn = document.getElementById('nav-btn');
+    const modal = document.getElementById('login-modal');
+    const closeBtn = document.getElementById('close-btn');
+
+    loginBtn.addEventListener('click', () => {
+        modal.style.display = 'flex';
+    });
+
+
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+    </script>   
 </html>

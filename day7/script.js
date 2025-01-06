@@ -24,8 +24,8 @@ function test(){
         console.log(sums);
     }
 }
-test();
 
+test();
 function sums(number){
     let sum=0;
     for(i=1;i<=number;i++){

@@ -12,6 +12,11 @@
     background-color:rgb(61, 64, 91);
     color: #fff;
     padding:20px;
+    position: fixed;
+    width: 95.5%;
+    z-index: 5;
+    
+    
 }
 nav ul {
     align-items: center;
@@ -21,7 +26,9 @@ nav ul {
     margin: 0;
     padding: 0;
 }
-
+.cover img{
+    height: 50px;
+}
 nav ul li a {
     text-decoration: none;
     color: #fff;
@@ -37,9 +44,12 @@ nav ul li a:hover {
     border-radius: 20px;
     border-color: #F2CC8F;
     background-color: rgb(61, 64, 91);
-    color: #F2CC8F;
+    color:#F2CC8F;
 }
-
+#nav-btn:hover{
+    background-color: #F2CC8F;
+    color: white;
+}
 .content{
     background-image: url('https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/anna-rosar-ZxFyVBHMK-c-unsplash.jpg');
     background-size: cover;
@@ -60,9 +70,8 @@ font-size: 35px;
     border-color: #F2CC8F;
     padding: 10px;
     width: 125px;
-    color: #fff;
+    color:white;
     background-color: #F2CC8F;
-
 }
 .content button:hover{
     background-color:orangered;
@@ -101,29 +110,6 @@ font-size: 35px;
     top: 770px;
 }
 
-/* .container{
-background-image: url('https://www.shutterstock.com/shutterstock/videos/34356766/thumb/1.jpg?ip=x480');
-background:white;
-border-radius: 20px;
-padding: 30px;
-
-width: 500px;
-margin: 50px auto;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-
-.container h2 {
-font-size: 24px;
-font-weight: bold;
-margin-bottom: 10px;
-}
-
-.container p {
-font-size: 14px;
-color: #666;
-margin-bottom: 20px;
-} */
 .container{
     /* background-color: #81B29A; */
     background-image: url('https://templatemo.com/templates/templatemo_587_tiya_golf_club/images/frederik-rosar-NDSZcCfnsbY-unsplash.jpg');
@@ -177,9 +163,29 @@ font-size: 14px;
 .subscribe button:hover {
 background: #e0a85c;
 }
+.mo{
+    padding-left: 15px;
+    position: absolute;
+    display: flex;
+    gap: 120px;
+}
+#id{
+    color: #ccc;
+}
+.mo h4{
+    color: #ccc;
+}
 
-h1{
-    text-align: center;
+
+.hit{
+    display: flex;
+    position: absolute;
+    left: 14%; 
+}
+.hitt{
+    display: flex;
+    position: absolute;
+    left: 60%; 
 }
 
 .table-content{
@@ -243,22 +249,22 @@ thead{
     background-color:rgb(245, 245, 220);
     padding: 100px;
 }
-.upcoming h1{
+.five{
     background-color: #81B29A;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+#e{
+    font-size: 25px;
+    color: #fff;
+}
+.five h1{
+    width: 50px;
+    font-size: 35px;
 }
 .yy{
     background-color: #81B29A;
-}
-.eee{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.eee button{
-    height: 30px;
-    border-radius: 20px;
-    background-color: #F2CC8F;
-    border-color: #F2CC8F;
 }
 
 .unm-1,.unm-2{
@@ -267,6 +273,7 @@ thead{
     padding: 10px;
     border-radius: 20px;
     gap: 20px;
+    align-items: center;
 
 }
 .unm-1{
@@ -274,6 +281,7 @@ thead{
 }
 .upcoming img{
     height: 200px;
+    border-radius: 20px;
 }
 
 .title{
@@ -288,9 +296,23 @@ thead{
     border-radius: 20px;
     align-content: center;
 }
-
-
-
+.upcoming button{
+    width:100px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    background-color: #F2CC8F;
+    border-color: transparent;
+}
+.wee{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.upcoming button:hover{
+    background-color: #E07A5F;
+}
 .upcoming button:hover{
     background-color: #E07A5F;
 }
@@ -418,8 +440,7 @@ thead{
     border-radius: 5px;
     cursor: pointer;
 }
-.hello{
-}
+
 .map{
     background-color: rgb(61, 64, 91) ;
     color: #fff;
@@ -444,5 +465,20 @@ thead{
     left: 65%;
     top: 544.6%;
 }
-
-  
+.history{
+    position: absolute;
+    padding-left: 50px;
+    top:115%;
+}
+.title{
+    position:absolute;
+    top: 370%;
+}
+.detial{
+    display: flex;
+    gap: 50px;
+}
+.detials{
+    display: flex;
+    gap: 70px;
+}

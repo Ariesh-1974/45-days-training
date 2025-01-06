@@ -1,0 +1,355 @@
+*{
+    margin: 0%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.nav-p{
+    padding: 10px 2px;
+    display: flex;
+    justify-content:space-between;
+}
+.nav img{
+    width:9%;
+    height: 10%;
+    padding: 10px;
+}
+.nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:98%;
+    background-color:#007aff;
+    align-items: center;
+    z-index: 1000;
+    padding-left:15px;
+    padding-right: 15px;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius: 25px;
+}
+nav ul{
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap:50px;
+    padding: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 250;
+    font-size: 1rem;
+    transition: color 0.3s;
+
+}
+nav ul li a{
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 10PX;
+    border-radius: 20PX;
+}
+
+.nav-btn{
+    width:100px;
+    padding: 15px;
+    font-weight: 200;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border-color: #ee626b;
+    background-color :#ee626b;
+    border: none;
+    color:white;
+}
+.Home{
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/banner-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-top:200px;
+    padding-bottom:200px;
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 0px 0px 150px 150px;
+}
+.forflex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    
+}
+.content{
+    color: #fff;
+    
+}
+.content h4{
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.content h1{
+    font-size: 48px;
+    margin-top:20px;
+    position: relative;
+    padding-bottom: 5PX;
+    margin-bottom: 30px;
+    width: 60%;
+}
+.content p{
+    text-align: justify;
+    margin-bottom: 70px;
+    width: 80%;
+    line-height:2;
+}
+.forflex img{
+    border-radius: 20px;
+}
+.content h1::after {
+    content: '';
+    position: absolute;
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/caption-dec.png');
+    background-size: cover;
+    width: 202px;
+    height: 12px;
+    left:125px;
+    bottom: -10px;
+}
+
+form input{
+    max-width: 450px;
+    width: 100%;
+    height: 44px;
+    border-color:transparent ;
+    border-radius: 25px;
+    background-color: #fff;
+    padding-right:25px;
+    padding-left: 25px;
+    font-size: 14px;
+    color: #7a7a7a;
+}
+form button{
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ee626b;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding:0px 25px;
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    right: 56.1%;
+    top: 115;
+}
+.prices{
+
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 226%;
+    margin-left: 170px;
+
+    background-color: #007aff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+form button:hover {
+background:#007aff;
+}
+span.offer{
+    position: absolute;
+   background-color: #ee626b;
+   color: #fff;
+   font-weight: 700;
+   bottom:-25%;
+   left: 62%;
+   border-radius: 50%;
+   font-size: 28px;
+   width:7%;
+   height:15%;
+   line-height: 90px;
+   text-align: center;
+}
+
+span.price{
+    position: absolute;
+    top: 37%;
+    right:70px;
+    width: 60px;
+    text-align: center;
+    padding:2px;
+    background-color: #007aff;
+    color: #fff;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius:20px; 
+}
+
+.feature{
+    margin-top: -80px;
+}
+
+.row{
+    display: flex;
+    padding-left: 90px;
+    gap: 95px;
+}
+
+.item{
+    width: 100%;
+    padding: 35px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+    background-color: #fff;
+    text-align: center;
+
+}
+.item h4{
+    margin-top: 20px;
+    font-size:17px ;
+    text-transform: uppercase;
+}
+.image{
+    background-color: #007aff;
+    width:90px;
+    height: 90px;
+    display: inline-block;
+    text-align: center;
+    align-content: center;
+    border-radius: 50%;
+}
+.section{
+    margin-top: 120px;
+    margin-bottom: 200px;
+}
+.ro{
+    padding: 0px 90px;
+}
+.sec{
+    width: 100%;
+    margin-bottom: 70px;
+    display: flex;
+    align-items:end;
+    justify-content:space-between;
+}
+.section-heading h6{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+}
+.section-heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 44px;
+
+}
+.but button{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #ee626b;
+    text-transform: uppercase;
+    width: 125px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+}
+.rows{
+    display: flex;
+    gap:10px;
+}
+.items{
+    width:90%;
+    border-radius: 25px;
+    background-color: #eeeeee;
+}
+.thumb img{
+    width:100%;
+    border-radius: 25px;
+}
+.down-content{
+    padding: 10px ;
+}
+.fee{
+    display: flex;
+    align-items:center;
+    gap: 50px;
+}
+.fee i{
+    background-color:#ee626b;
+    color: #fff;
+    padding: 70%;
+    border-radius: 20px;
+}
+span.category{
+    font-size: 14px;
+    color:#7a7a7a ;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.sections{
+    background-color:#f7f7f7;
+    padding-top: 100px;
+    padding-bottom:100px;
+    border-radius: 20%;
+}
+.space{
+    padding:25px;
+    display: flex;
+    gap: 34px;
+    padding-left: 80px;
+}
+.ite{
+    width:13.2%;
+    padding-bottom: 30px;
+    border-radius: 25px;
+    background-color:#fff;
+    text-align: center;
+
+}
+.thumbs img{
+    width:150px;
+    border-radius: 20px;
+    padding-bottom: 20px;
+}
+.down-content1 a{
+    text-decoration: none;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 15px;
+    background-color: #ee626b;
+    color: #fff;
+    border-radius: 20px;
+    top: 392%;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transform:translateX(-50%);
+}
+.Categories{
+    margin-top: 150px;
+}
+.align{
+    text-align: center;
+}
+.cat h6{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+}
+.cat h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 44px;
+}
+

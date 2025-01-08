@@ -1,5 +1,4 @@
 // task-1
-
     // let a = Number(prompt("enter value:"));
     // let b = Number(prompt("enter value1: "));
     // let addition=a+b;
@@ -63,15 +62,14 @@
 //     console.log(1+" x "+input+" = "+value); 
 // }
 // //task 7
-// //task 8
 // console.log(alert(" Welcome to my website!"));
 
-// // task 9
+// // task 8
 // function confirmclick(){
 //     confirm("cliked");
 // }
 // confirm();
-// //task 10
+// //task 9
 // function promptclick(){
 //     let display;
 //     let information=prompt("plese enter your age:");
@@ -83,19 +81,19 @@
 //     }
 // }
 // promptclick();
-//task 11
+//task 10
 // let weight=Number(prompt("enter weight:"));
 // let height=Number(prompt("enter height:"));
 // let bmi=weight/(height*height);
 // console.log(alert("BMI:"+bmi));
-//task 12
+//task 11
 // let word=prompt("enter word:");
 // let rev='';
 // for(let i=word.length-1;i>=0;i--){
 //     rev += word.charAt(i);  
 // }
 // console.log(rev);
-//task 13
+//task 12
 // let word=prompt("enter word:");
 // let count=0;
 //     let vowel="aeiou";
@@ -105,7 +103,7 @@
 //     }
 // }
 // console.log(count);
-//task 14
+//task 13
 // let input = prompt("Enter your word:");
 // let rev = '';
 // for (let i = input.length - 1; i >= 0; i--) {
@@ -116,10 +114,33 @@
 // } else {
 //     console.log(false);
 // }
-//task 15
+//task 14
 // let input =prompt("enter word:");
 // let takes =input.split(" ").map(input=>input[0].toUpperCase()).join(".");
 // alert(takes);
+//task 15
+// let input=prompt("enter:");
+// input=input.replace("programming","javascript");
+// console.log(input);
+//task 16
+// let input=prompt("enter:");
+// input=input.split(" ");
+// console.log(input);
+//task 17
+// let input=prompt("enter the words");
+// input=input.split(' ').join('');
+// console.log(input);
+//task 18
+// let input ='hello';
+// let letter='l';
+// let count=0;
+// for(let i=0;i<input.length;i++){
+//     if(input.charAt(i) == (letter)){
+//         count++;
+//     }
+  
+// }
+// console.log(count);
 
   
 

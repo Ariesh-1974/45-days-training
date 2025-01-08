@@ -11,6 +11,7 @@ function evenodd(input){
 }
 
 evenodd([10,25,45,55]);
+
 function number(size){
     for(let i=1;i<=size;i++){
         console.log(i);
@@ -45,6 +46,17 @@ function largestnumber(data){
         console.log(largest);
     }
 }
+function primenumber(input){
+    if(input>1){
+        for(let i=2;i<input;i++){
+            if(input%i==0){
+               console.log("not a prime");
+               break;
+            }
+        }
+        console.log("prime");
+    }
+}
 largestnumber([1,5,3,9,2]);
 
 function vowelcount(word){
@@ -62,7 +74,7 @@ vowelcount('ariesh');
 function starprint(row){
     for(let i=1;i<=row;i++){
         let star="*";
-        console.log(star.repeat(i))
+        console.log(star.repeat(i));
     }
 }
 starprint(5);
@@ -101,10 +113,18 @@ function primenumber(input){
                console.log("not a prime");
                break;
             }
-            else{
-                console.log("prime");
-            }
         }
+        console.log("prime");
     }
 }
 primenumber(3);
+
+const arr=[{
+    name:'Ariesh',
+    age:21,
+    gmail:"arieshgk1985@gmail.com",
+    city:"salem",
+    pincode:636502
+}]
+arr[0].age=20;
+console.log(arr[0]);

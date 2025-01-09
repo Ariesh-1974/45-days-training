@@ -21,8 +21,7 @@ function findlargestword(input){
     console.log(longestword);
     
 }
-findlargestword('hello every one');
-
+findlargestword('hello ever one');
 //task 2
 function replace(input){
     input=input.split(' ');

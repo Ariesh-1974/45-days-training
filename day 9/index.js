@@ -8,6 +8,7 @@
 // let input1 = prompt("enter1:");
 // let input2 = prompt("enter2:");
 // console.log(input1.charAt(0).toUpperCase() + input1.slice(1),input2.charAt(0).toUpperCase() + input2.slice(1));
+
 //task 1
 function findlargestword(input){
     let store=input.split(' ');
@@ -20,7 +21,8 @@ function findlargestword(input){
     console.log(longestword);
     
 }
-findlargestword('hello ever one');
+findlargestword('hello every one');
+
 //task 2
 function replace(input){
     input=input.split(' ');
@@ -32,6 +34,7 @@ function replace(input){
     console.log(input.join(' '));
 }
 replace('John Mary John Alex Mary ');
+
 //task 3
 function replaceeven(words){
     words=words.split(' ');
@@ -43,17 +46,20 @@ function replaceeven(words){
     console.log(words.join(' '));
 }
 replaceeven("I am learning JavaScript every day");
-//task 4
-function remove(input) {
-    let store = '';
-    input = input.split('');
 
-    for (let i = 0; i < input.length; i++) {
-        if (input[i] !== input[i + 1]) {
-            store += input[i];  
+//task 4
+function remove(input){
+    let store=' ';
+    let space=' ';  
+    for(let i=0;i<input.length;i++){
+        if(input.charAt(i)==space){
+            store+=input.charAt(i);
+        }
+       else if(!store.includes(input.charAt(i))){
+             store+= input.charAt(i);
         }
     }
-    console.log(result); 
+    console.log(store);
 }
 remove('Hello world');
 

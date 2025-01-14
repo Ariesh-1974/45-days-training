@@ -43,7 +43,7 @@ nav ul li a{
     transition: color 0.3s;
 
 }
-nav ul li a{
+nav ul li:hover{
     background-color: rgba(255, 255, 255, 0.10);
     padding: 10PX;
     border-radius: 20PX;
@@ -113,10 +113,10 @@ nav ul li a{
     bottom: -10px;
 }
 
-form input{
-    max-width: 450px;
+.serch-input form input{
+    max-width: 400px;
     width: 100%;
-    height: 44px;
+    height: 50px;
     border-color:transparent ;
     border-radius: 25px;
     background-color: #fff;
@@ -125,7 +125,7 @@ form input{
     font-size: 14px;
     color: #7a7a7a;
 }
-form button{
+.serch-input form button{
     display: inline-block;
     height: 50px;
     line-height: 50px;
@@ -137,22 +137,22 @@ form button{
     border: none;
     border-radius: 25px;
     position: absolute;
-    right: 56.1%;
-    top: 115;
+    right: 55%;
+    
 }
 .prices{
 
     display: flex;
     justify-content: space-evenly;
     position: absolute;
-    top: 226%;
+    top: 235%;
     margin-left: 170px;
-
     background-color: #007aff;
     color: #fff;
     padding: 10px;
     border-radius: 10px;
 }
+
 form button:hover {
 background:#007aff;
 }
@@ -220,16 +220,23 @@ span.price{
 }
 .section{
     margin-top: 120px;
-    margin-bottom: 200px;
+    margin-bottom: 200px; 
 }
 .ro{
     padding: 0px 90px;
 }
 .sec{
-    width: 100%;
+    width:100%;
     margin-bottom: 70px;
     display: flex;
-    align-items:end;
+    align-items:center;
+    justify-content:space-between;
+}
+.sect{
+    width:305%;
+    margin-bottom: 70px;
+    display: flex;
+    align-items:center;
     justify-content:space-between;
 }
 .section-heading h6{
@@ -246,6 +253,7 @@ span.price{
     line-height: 44px;
 
 }
+
 .but button{
     font-size: 14px;
     font-weight: 400;
@@ -297,12 +305,7 @@ span.category{
     padding-bottom:100px;
     border-radius: 20%;
 }
-.space{
-    padding:25px;
-    display: flex;
-    gap: 34px;
-    padding-left: 80px;
-}
+
 .ite{
     width:13.2%;
     padding-bottom: 30px;
@@ -327,7 +330,7 @@ span.category{
     background-color: #ee626b;
     color: #fff;
     border-radius: 20px;
-    top: 392%;
+    top: 408%;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 600;
@@ -353,3 +356,447 @@ span.category{
     line-height: 44px;
 }
 
+.border{
+    background-color: #007aff;
+    position:relative;
+    height:236px;
+    width:80%;
+    border-radius: 25px;                                                                                                        
+    text-align: center;
+}
+.border h4{
+    padding: 20px;
+    color: #fff;
+}
+
+.bo img{
+    position:relative;
+    width: 100%;
+    border-radius: 20px;
+}
+.all{
+    display: flex;
+    padding-left: 60px;
+    margin-top: 100px;
+}
+.shop-newsletter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-newsletter .image img{
+    border-radius: 20px;
+    position: relative;
+}
+.shop-newsletter .shop{
+    position: absolute;
+    left: 10%;
+    top: 450%;
+    background-color: #f7f7f7;
+    padding: 5%;
+    width: 23%;
+    height: 60vh;
+    border-radius: 20px;
+    height:45%;
+}
+.shop-newsletter .shop h4{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 800;
+}
+.shop-newsletter .shop h1{
+    font-size: 38px;
+    font-family: sans-serif;
+}
+.shop-newsletter .shop h1 span{
+    color:#0071f8
+}
+.shop-newsletter .shop p{
+  font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.8;
+    color: #58514a;
+}
+.shop-newsletter .shop button{
+    padding: 15px 30px;
+    background-color: #ee626b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    cursor: pointer;
+}
+.shop-newsletter .shop button:hover{
+    background-color: #0071f8;
+}
+.shop-newsletter .shop button a{
+    text-decoration: none;
+    color: white;
+}
+.newsletter{
+    position: absolute;
+    right: 10%;
+    top: 460%;
+    background-color: #f7f7f7;
+    padding: 5%;
+    width: 23%;
+    height: 35vh;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+.newsletter h4{
+    color: #ee626b;
+    text-transform: uppercase;
+
+    font-size: 14px;
+    font-weight: 800;
+}
+.newsletter h1{
+    font-size: 38px;
+}
+.newsletter h1 span{
+    color:#0071f8;
+}
+.newsletter div{
+    padding-left: 20px;
+    background-color: white;
+    border-radius: 50px;
+    width: 103%;
+    margin-top: 3%;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: space-between;
+}
+.newsletter div:focus-within{
+    outline: 4px solid #97c2f7;
+}
+.newsletter div input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+.newsletter div button{
+    padding: 15px;
+    background-color: #ee626b;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+}
+.newsletter div button:hover{
+    background-color: #0071f8;
+}
+.newsletter div button a{
+    text-decoration: none;
+    color: white;
+}
+footer{
+  background-image: url("/ind-img/footer-bg.jpg");
+  padding: 0px 90px 90px;
+  text-align: center;
+  border-top-right-radius: 150px;
+  border-top-left-radius: 150px;
+  height: 10vh;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 25%;
+  margin-bottom: -10%;
+  line-height: 90px;
+}
+footer a{
+  color: white;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+footer a:hover{
+  color: gainsboro;
+}
+.container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      padding: 20px;
+      text-align: left;
+      width: 300px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 15px;
+    }
+    .card .tag {
+      color: #ff6b6b;
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .card h3 {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #333333;
+    }
+    .card h3 span {
+      color: #1e90ff;
+    }
+    .card p {
+      color: #666666;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+    .card button, .card input[type="email"] {
+      border: none;
+      outline: none;
+      padding: 10px 15px;
+      font-size: 14px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+    .card button {
+      background-color: #ff6b6b;
+      color: white;
+    }
+    .card input[type="email"] {
+      width: calc(100% - 100px);
+      border: 1px solid #ddd;
+    }
+    .subscribe-container {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+  
+      .card {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+  
+      .card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+  
+      .tag {
+        color: #ff6b6b;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+  
+      .card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        line-height: 1.4;
+      }
+  
+      .card h3 span {
+        color: #007bff;
+      }
+  
+      .card p {
+        font-size: 14px;
+        color: #6c757d;
+        margin-bottom: 20px;
+      }
+  
+      .btn {
+        display: inline-block;
+        padding: 10px 15px;
+        font-size: 14px;
+        color: #fff;
+        background-color: #ff6b6b;
+        border: none;
+        border-radius: 25px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+      }
+  
+      .newsletter {
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+      }
+  
+      .newsletter input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        font-size: 14px;
+      }
+  
+      .newsletter button {
+        padding: 10px 15px;
+        background-color: #ff6b6b;
+        color: #fff;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+
+      .shop {
+        position: absolute;
+        top: 570%;
+        margin-top: 80px;
+        background-color: #f7f7f7;
+        border-radius: 25px;
+        padding: 80px;
+        width:25%;
+
+    }
+    .section-heading h2 em {
+        font-style: normal;
+        color: #0071f8;
+    }
+    .section-heading h6 {
+        color: #ee626b;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    .section-heading h2 {
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: capitalize;
+        margin-top: 20px;
+        line-height: 44px;
+    }
+    .cta .shop p {
+        font-weight: 600;
+        font-size: 16px;
+    }
+    .shop .main-button {
+        margin-top: 50px;
+    }
+    .main-button a:hover {
+        background-color: #0071f8;
+        color: #fff;
+    }
+    .main-button a {
+        text-decoration: none;
+        display: inline-block;
+        background-color: #ee626b;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+        height: 50px;
+        line-height: 50px;
+        padding: 0px 30px;
+        border-radius: 25px;
+    }
+    .subscribe {
+        background-color: #f7f7f7;
+        border-radius: 25px;
+        padding: 80px 60px;
+        width: 25%;
+        height: 50%;
+        position: absolute;
+        left:60%;
+        top: 600%;
+    }
+    .subscribe::after {
+        background-image: url(https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/cta-bg.jpg);
+        max-width: 550px;
+        max-height: 510px;
+        width: 150%;
+        height: 200%;
+        position: absolute;
+        content: '';
+        right: 10%;
+        border-radius: 25px;
+        transform: translateX(-275px);
+        top: -40%;
+        z-index: -1;
+    }
+
+    .section-heading {
+        margin-bottom: 50px;
+    }
+    .cta .subscribe form {
+        position: relative;
+        max-width: 100%;
+    }
+    form input {
+        max-width: 100%;
+        width: 78%;
+        height: 50px;
+        outline: none;
+        border-radius: 25px;
+        background-color: #fff;
+        border: none;
+        padding: 0px 25px;
+        font-size: 14px;
+        color: #7a7a7a;
+    }
+    form button {
+        display: inline-block;
+        height: 50px;
+        line-height: 50px;
+        background-color: #ee626b;
+        color: #fff;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 0px 25px;
+        border: none;
+        border-radius: 25px;
+        position: absolute;
+        right:80px;
+        top: 610;
+
+    }
+    .cta .subscribe form {
+        position: relative;
+        max-width: 100%;
+    }
+    .all{
+        display: flex;
+    }
+    .space{
+        padding:25px;
+        display: flex;
+        gap: 34px;
+    }
+    footer p{
+        text-align: center;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 400;
+        padding-left:200px;
+    }
+    footer {
+        margin-top: 70%;
+        background-color: #0071f8;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/footer-bg.jpg');
+        border-radius: 150px 150px 0px 0px;
+    }

@@ -1,0 +1,215 @@
+*{
+    margin: 0%;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.nav-p{
+    padding: 10px 2px;
+    display: flex;
+    justify-content:space-between;
+}
+.nav img{
+    width:9%;
+    height: 10%;
+    padding: 10px;
+}
+.nav{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width:98%;
+    background-color:#007aff;
+    align-items: center;
+    z-index: 1000;
+    padding-left:15px;
+    padding-right: 15px;
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius: 25px;
+}
+nav ul{
+    align-items: center;
+    list-style: none;
+    display: flex;
+    gap:50px;
+    padding: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 250;
+    font-size: 1rem;
+    transition: color 0.3s;
+
+}
+nav ul li :hover{
+    background-color: rgba(255, 255, 255, 0.10);
+    padding: 10PX;
+    border-radius: 20PX;
+}
+
+.nav-btn{
+    width:100px;
+    padding: 15px;
+    font-weight: 200;
+    border-radius: 20px;
+    text-transform: uppercase;
+    border-color: #ee626b;
+    background-color :#ee626b;
+    border: none;
+    color:white;
+}
+.headingpage{
+    background-image: url('	https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/page-heading-bg.jpg');
+    border-radius: 0px 0px 150px 150px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0px 100px 0px;
+    text-align: center;
+}
+
+.headingpage h3{
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 20px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.headingpage span{
+    display: inline-block;
+    font-size: 16px;
+    color: #fff;
+}
+.headingpage span a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.section {
+    margin-top: 120px;
+}
+
+.trending ul.select{
+    list-style: none;
+    text-align: center;
+    margin-bottom: 70px;
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+}
+
+.trending ul.select li a {
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #1e1e1e;
+    background-color: #eee;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: all .3s;
+}
+
+.trending ul.select li a.is_active{
+    background-color: #ee626b;
+    color: #fff;
+}
+.trending ul.select li a:hover {
+    color: #ee626b;
+}
+
+.trending-box .item {
+    background-color: #eeeeee;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    margin-bottom: 30px;
+}   
+.trending-box .item .thumb {
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.trending-box .item span.price {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border-radius: 10px;
+    background-color: #008af8;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #fff;
+    padding: 8px 15px 6px 15px;
+}   
+.trending-box .item .down-content {
+    padding: 25px;
+}
+
+.trending-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hello{
+    padding-left: 70px;
+    padding-right:70px;
+    padding-bottom:70px ;
+}
+
+.down{
+    display: flex;
+    align-items: center;
+    gap:25%;
+}
+.bar{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+    font-weight: 600;
+}
+.bar li a{
+    text-decoration: none;
+    color:black;
+    background-color: #eee;
+    padding: 7px;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 22px;
+}
+.bar li :hover{
+    color: #fff;
+    background-color: #008af8;
+}
+footer {
+    margin-top: 10%;
+    text-align: center;
+    background-color: #0071f8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('https://templatemo.com/templates/templatemo_589_lugx_gaming/assets/images/footer-bg.jpg');
+    border-radius: 150px 150px 0px 0px;
+    padding: 5%;
+    color: #fff;
+}
+footer a{
+    color: #fff;
+    text-decoration: none;
+}
+

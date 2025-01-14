@@ -212,4 +212,236 @@ footer a{
     color: #fff;
     text-decoration: none;
 }
+.rows{
+    display: flex;
+    
+}
 
+.sections h4 {
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+.sections span.price {
+    font-size: 27px;
+    font-weight: 700;
+    color: #0071f8;
+}
+
+.sections span.price em {
+    font-style: normal;
+    color: #c8c8c8;
+    font-size: 17px;
+    text-decoration: line-through;
+    font-weight: 500;
+    margin-right: 5px;
+}
+.sections{
+    padding:70px;
+}
+
+.sections p {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-weight: 200;
+    text-align: justify;
+}
+
+.sections form {
+    display: inline;
+}
+
+.sections ul {
+    margin-top: 60px;
+}
+
+.sections img{
+    height:450px;
+}
+.cot-2{
+    padding-left: 100px;
+    text-align: left;
+    width: 53%;
+}
+.sections form input {
+    width: 80px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border: 1px solid #e7e7e7;
+    border-radius: 25px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+}
+
+.sections form button {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    background-color: #ee626b;
+    color: #fff;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 0px 25px;
+    border: none;
+    border-radius: 25px;
+    transition: all .3s;
+}
+.sections form button:hover {
+    background-color: #0071f8;
+}
+.sections ul li span {
+    width: 120px;
+    display: inline-block;
+    color: #aaa;
+}
+.sections ul li {
+    display: block;
+    margin: 20px 0px;
+    font-size: 14px;
+    color: #0071f8;
+}
+.sections ul li {
+    display: block;
+    margin: 20px 0px;
+    font-size: 14px;
+    color: #0071f8;    
+}
+.sections ul li a{
+    text-decoration: none;
+    color: #0071f8;  
+}
+
+hr{
+    margin-top: 70px;
+}
+
+.tabs-content {
+    background-color: #f7f7f7;
+    border-radius: 25px;
+    padding: 60px;
+    transition: all 0.3s;
+}
+
+.tabs-content ul.nav-tabs li {
+    border-right: 1px solid #d7d7d7;
+    margin-right: 30px;
+    padding-right: 30px;
+}
+
+.tabs-content .nav-link {
+    border: none;
+    border-radius: 0px;
+    background-color: transparent !important;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e1e1e;
+    padding: 0px;
+}
+
+ .tabs-content p {
+    font-size: 14px;
+    line-height: 28px;
+    color: #4a4a4a;
+}
+.containers{
+    padding: 70px;
+}
+
+.dd{
+    color: #0071f8;
+}
+
+.Categories{
+    margin-top: 150px;
+}
+
+
+.align{
+    text-align: center;
+}
+
+.cat h6{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.cat h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 44px;
+}
+
+
+.border{
+    background-color: #007aff;
+    position:relative;
+    height:236px;
+    width:80%;
+    border-radius: 25px;                                                                                                        
+    text-align: center;
+}
+.border h4{
+    padding: 20px;
+    color: #fff;
+}
+
+.bo img{
+    position:relative;
+    width: 100%;
+    border-radius: 20px;
+}
+.all{
+    display: flex;
+    padding-left: 60px;
+    margin-top: 100px;
+}
+.sec{
+    width:100%;
+    margin-bottom: 70px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.sect{
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.section-heading h6{
+    color: #ee626b;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.section-heading h2{
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-top: 20px;
+    line-height: 44px;
+
+}
+
+.but button{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #ee626b;
+    text-transform: uppercase;
+    width: 125px;
+    height: 50px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+}

@@ -510,7 +510,7 @@ p {
 .contact-page{
     padding: 70px;
 }
-.contact-form {
+.contact{
   flex: 1;
   padding: 20px;
   position: absolute;
@@ -518,7 +518,7 @@ p {
   top: 450px;
 }
 
-.map-container {
+.map{
   width: 110%;
   height: 300px;
   border-radius: 15px;
@@ -526,7 +526,7 @@ p {
   margin-bottom: 30px;
 }
 
-.map-container iframe {
+.map iframe{
   width: 100%;
   height: 100%;
   border: none;

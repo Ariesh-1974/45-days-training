@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Task</title>
+</head>
+<body>
+    <h1>Information Table</h1>
+    <table>
+        <thead>
+            <tr id="head">
+            </tr>
+        </thead>
+        <tbody id="body">
+        </tbody>
+    </table>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Task Description</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="taskTable"></tbody>
+    </table>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: center;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid black;
+        }
+        th {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <script>
+        const employees = [
+            { id: 1, name: "John", age: 28, department: "HR" },
+            { id: 2, name: "Jane", age: 34, department: "Finance" },
+            { id: 3, name: "Mike", age: 25, department: "IT" },
+            { id: 4, name: "Emma", age: 30, department: "Marketing" },
+            { id: 5, name: "Chris", age: 40, department: "Operations" },
+            { id: 6, name: "Sophia", age: 29, department: "HR" },
+            { id: 7, name: "Daniel", age: 32, department: "Finance" },
+            { id: 8, name: "Olivia", age: 27, department: "IT" },
+            { id: 9, name: "Liam", age: 35, department: "Sales" },
+            { id: 10, name: "Noah", age: 26, department: "Logistics" },
+        ];
+
+        const tHead = document.getElementById('head');
+        const tbody = document.getElementById('body');
+        
+        const key=Object.keys(employees[0]);
+        console.log(key);
+        for(let i=0;i<key.length;i++){
+            const th=document.createElement('th');
+            th.textContent=key[i].toUpperCase();
+            tHead.appendChild(th);
+        } 
+
+        for(let i=0;i<employees.length;i++){
+            const row=document.createElement('tr');
+            const value=Object.values(employees[i]);
+            for (let j=0;j<value.length;j++){
+                const data=document.createElement('td');
+                data.textContent=value[j];
+                row.appendChild(data);
+            }
+            tbody.appendChild(row);
+        }
+
+        
+        const data = [
+        { 
+            id: 1, 
+            name: "John", 
+            tasks: [ 
+                { taskId: 101, description: "Complete report", status: "Pending" }, 
+                { taskId: 102, description: "Review code", status: "Completed" }
+            ]
+        },
+        { 
+            id: 2, 
+            name: "Jane", 
+            tasks: [ 
+                { taskId: 103, description: "Prepare slides", status: "In Progress" }, 
+                { taskId: 104, description: "Team meeting", status: "Pending" }
+            ]
+        }
+    ];
+
+    const taskTable = document.getElementById('taskTable');
+
+    data.forEach(person => {
+        person.tasks.forEach(task => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${person.name}</td>
+                <td>${task.description}</td>
+                <td>${task.status}</td>
+            `;
+            taskTable.appendChild(row);
+        });
+    });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Day-5 in JS</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="input" placeholder="Enter word" required>
+        <button id="value" type="button">Submit</button>
+    </form>
+    <script>
+        document.getElementById('value').addEventListener('click', () => {
+            const getinput = document.getElementById('input').value;
+            let sum=0;
+            for (let i = 0; i < getinput.length; i++) {
+                let sto = getinput.charCodeAt(i);
+                sum += sto;
+            }
+            console.log(sum);
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.key === 's') {
+                event.preventDefault();
+            }
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.shiftKey && event.key === 'Q') {
+                window.close();
+                }
+            });
+    </script>  
+</body>
+</html>

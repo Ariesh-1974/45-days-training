@@ -21,6 +21,7 @@
                 <th>Name</th>
                 <th>Task Description</th>
                 <th>Status</th>
+               
             </tr>
         </thead>
         <tbody id="taskTable"></tbody>
@@ -56,16 +57,14 @@
             { id: 9, name: "Liam", age: 35, department: "Sales" },
             { id: 10, name: "Noah", age: 26, department: "Logistics" },
         ];
-
-        const tHead = document.getElementById('head');
-        const tbody = document.getElementById('body');
-        
+        const Head = document.getElementById('head');
+        const body = document.getElementById('body');
         const key=Object.keys(employees[0]);
         console.log(key);
         for(let i=0;i<key.length;i++){
             const th=document.createElement('th');
             th.textContent=key[i].toUpperCase();
-            tHead.appendChild(th);
+            Head.appendChild(th);
         } 
 
         for(let i=0;i<employees.length;i++){
@@ -76,10 +75,9 @@
                 data.textContent=value[j];
                 row.appendChild(data);
             }
-            tbody.appendChild(row);
+            body.appendChild(row);
         }
 
-        
         const data = [
         { 
             id: 1, 
@@ -98,9 +96,7 @@
             ]
         }
     ];
-
     const taskTable = document.getElementById('taskTable');
-
     data.forEach(person => {
         person.tasks.forEach(task => {
             const row = document.createElement('tr');
@@ -111,8 +107,7 @@
             `;
             taskTable.appendChild(row);
         });
-    }); rrrrrrr
-
+    });
     </script>
 </body>
 </html>

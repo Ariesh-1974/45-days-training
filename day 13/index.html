@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Page</title>
+    <link href="index.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <div class="f1">
+        <form>
+            <h2>Student Information Form</h2>
+
+            <label for="name">Name:</label><br><br>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+            <div id="nameError" class="error hide">Name is required.</div><br>
+
+            <label for="age">Age:</label><br><br>
+            <input type="number" id="age" name="age" placeholder="Enter your age"><br>
+            <div id="ageError" class="error hide">Age is required.</div><br>
+
+            <label for="phone">Phone Number:</label><br><br>
+            <input type="number" id="phone" name="phone" placeholder="Enter your phone number"><br>
+            <div id="phoneError" class="error hide">Phone number is required.</div><br>
+
+            <p>Gender:</p>
+            <div class="radio">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label><br>
+                <div id="genderError" class="error hide">Please select your gender.</div>
+            </div><br>
+
+            <p>Subject:</p>
+            <input type="checkbox" id="mern" name="subject" value="MERN stack">
+            <label for="mern">MERN stack</label>
+            <input type="checkbox" id="full" name="subject" value="Full stack">
+            <label for="full">Full stack</label>
+            <input type="checkbox" id="cyber" name="subject" value="Cyber security">
+            <label for="cyber">Cyber security</label><br>
+            <div id="subjectError" class="error hide">Please select at least one subject.</div><br>
+
+            <label for="dob">Date of Birth:</label><br><br>
+            <input type="date" id="dob" name="dob"><br>
+            <div id="dobError" class="error hide">Please enter a valid past date.</div><br>
+
+            <label for="location">Location:</label><br><br>
+            <select id="location" name="location">
+                <option value="" disabled selected>Select your location</option>
+                <option value="Salem">Salem</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Madurai">Madurai</option>
+            </select><br>
+            <div id="locationError" class="error hide">Please select a location.</div><br>
+
+            <button id="sub" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="table-container">
+        <h2>Submitted Data</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Gender</th>
+                    <th>Subjects</th>
+                    <th>Date of Birth</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

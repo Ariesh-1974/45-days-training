@@ -52,31 +52,46 @@ function bookCar(index) {
     bookingSection.innerHTML = `
         <h2>Booking for ${selectedCar.model}</h2>
         <p>Price per day: $${selectedCar.pricePerDay}</p>
-        <label for="days">Number of Days:</label>
-        <input type="number" id="days" min="1" placeholder="Enter number of days" required>
-        <button onclick="confirmBooking(${index})">Confirm Booking</button>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" required><br><br>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" required><br><br>
+        <button onclick="confirmBooking(${index})">Confirm Booking</button><br><br>
         <button onclick="cancelBooking()">Cancel</button>
     `;
 }
+
 function confirmBooking(index) {
     const selectedCar = cars[index];
-    const days = document.getElementById('days').value;
+    const startDate = document.getElementById('startDate').value;
+    const endDate = document.getElementById('endDate').value;
 
-    if (days && days > 0) {
-        const totalPrice = selectedCar.pricePerDay * days;
-        alert(`Booking Confirmed! Total price: $${totalPrice}`);
-        const bookingDetails = {
-            car: selectedCar,
-            days: days,
-            totalPrice: totalPrice
-        };
-        localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+    if (startDate && endDate) {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        const timeDifference = end - start;
+        const days = timeDifference / (1000 * 3600 * 24);
+
+        if (days > 0) {
+            const totalPrice = selectedCar.pricePerDay * days;
+            alert(`Booking Confirmed! Total price: $${totalPrice}`);
+            const bookingDetails = {
+                car: selectedCar,
+                startDate: startDate,
+                endDate: endDate,
+                totalPrice: totalPrice
+            };
+            localStorage.setItem('bookingDetails', JSON.stringify(bookingDetails));
+        } else {
+            alert("End date must be after the start date.");
+        }
     } else {
-        alert("Please enter a valid number of days.");
+        alert("Please select both start and end dates.");
     }
 }
 
 function cancelBooking() {
     bookingSection.innerHTML = ''; 
 }
+
 renderCars();

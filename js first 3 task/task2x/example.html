@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+</head>
+<body>
+    <h1>Countdown Timer</h1>
+    
+    <label for="inputHours">Enter Hours:</label>
+    <input type="number" id="inputHours" value="0">
+    <button onclick="startCountdown()">Start Countdown</button>
+
+    <h2>Time Remaining: <span id="timer"></span></h2>
+
+    <script>
+        function startCountdown() {
+            let hoursInput = parseInt(document.getElementById('inputHours').value);
+            let totalTime = hoursInput * 3600; // Convert hours to total seconds
+
+            let timerElement = document.getElementById('timer');
+            function updateTimer() {
+                if (totalTime <= 0) {
+                    clearInterval(interval);
+                    timerElement.textContent = "Time's up!";
+                    return;
+                }
+
+                let d = Math.floor(totalTime / 86400); // Convert to days
+                let h = Math.floor((totalTime % 86400) / 3600); // Remaining hours
+                let m = Math.floor((totalTime % 3600) / 60); // Remaining minutes
+                let s = totalTime % 60; // Remaining seconds
+
+                timerElement.textContent = `${d}d ${h}h ${m}m ${s}s`;
+                totalTime--;
+            }
+
+            updateTimer(); // Show initial time
+            let interval = setInterval(updateTimer, 1000); // Update every second
+        }
+    </script>
+</body>
+</html>

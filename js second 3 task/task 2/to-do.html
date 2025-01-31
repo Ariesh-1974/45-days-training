@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        .btn-success {
+            background-color: #28a745;
+        }
+        .btn-warning {
+            background-color: #ffc107;
+        }
+        table {
+            width: 100%;
+            margin-top: 30px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f1f1f1;
+        }
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>To-Do List with Timer</h2>
+
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="title" class="form-label">Task Title</label>
+                <input type="text" class="form-control" id="title" required>
+            </div>
+            <div class="form-group">
+                <label for="description" class="form-label">Task Description</label>
+                <textarea class="form-control" id="description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="estimateTime" class="form-label">Estimated Time (in minutes)</label>
+                <input type="number" class="form-control" id="estimateTime" required>
+            </div>
+            <button type="submit" class="btn">Add Task</button>
+        </form>
+
+        <h3 class="mt-5">Tasks</h3>
+        <table id="taskTable">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Estimated Time</th>
+                    <th>Time Left</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Task rows will go here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.getElementById('taskForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const estimateTime = document.getElementById('estimateTime').value;
+
+            const task = {
+                title,
+                description,
+                estimateTime,
+                startTime: null,
+                endTime: null,
+                timerInterval: null,
+                status: 'Pending',
+                points: 0
+            };
+
+            addTaskToTable(task);
+            saveTaskToLocalStorage(task);
+            
+            document.getElementById('title').value = '';
+            document.getElementById('description').value = '';
+            document.getElementById('estimateTime').value = '';
+        });
+
+        function addTaskToTable(task) {
+            const tableBody = document.getElementById('taskTable').querySelector('tbody');
+            const row = document.createElement('tr');
+            
+            row.innerHTML = `
+                <td>${task.title}</td>
+                <td>${task.description}</td>
+                <td>${task.estimateTime} mins</td>
+                <td id="timer-${task.title}">${task.startTime ? 'Running' : 'Not Started'}</td>
+                <td>${task.status}</td>
+                <td>
+                    <button class="btn btn-success" onclick="startTaskTimer('${task.title}')">Start</button>
+                    <button class="btn btn-danger" onclick="stopTaskTimer('${task.title}')">Stop</button>
+                    <button class="btn btn-warning" onclick="editTask('${task.title}')">Edit</button>
+                    <button class="btn btn-danger" onclick="deleteTask('${task.title}')">Delete</button>
+                </td>
+            `;
+
+            tableBody.appendChild(row);
+        }
+
+        function startTaskTimer(title) {
+            const task = getTaskFromLocalStorage(title);
+            task.startTime = new Date().getTime();
+            task.timerInterval = setInterval(function() {
+                const timeElapsed = Math.floor((new Date().getTime() - task.startTime) / 1000);
+                const timeRemaining = task.estimateTime * 60 - timeElapsed;
+                document.getElementById(`timer-${title}`).innerText = timeRemaining > 0 ? `${timeRemaining}s left` : 'Time up!';
+            }, 1000);
+        }
+
+        function stopTaskTimer(title) {
+            const task = getTaskFromLocalStorage(title);
+            clearInterval(task.timerInterval);
+            task.endTime = new Date().getTime();
+            task.status = task.endTime - task.startTime <= task.estimateTime * 60 * 1000 ? 'Completed' : 'Failed';
+            task.points = task.status === 'Completed' ? 1 : -1;
+
+            updateTaskStatusInTable(task);
+            saveTaskToLocalStorage(task);
+        }
+
+        function editTask(title) {
+            alert('This feature is not implemented yet!');
+        }
+
+        function deleteTask(title) {
+            removeTaskFromLocalStorage(title);
+            const rows = document.querySelectorAll('#taskTable tbody tr');
+            rows.forEach(row => {
+                if (row.querySelector('td').innerText === title) {
+                    row.remove();
+                }
+            });
+        }
+
+        function saveTaskToLocalStorage(task) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.push(task);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        function getTaskFromLocalStorage(title) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            return tasks.find(task => task.title === title);
+        }
+
+        function updateTaskStatusInTable(task) {
+            const rows = document.querySelectorAll('#taskTable tbody tr');
+            rows.forEach(row => {
+                if (row.querySelector('td').innerText === task.title) {
+                    row.querySelector('td:nth-child(5)').innerText = task.status;
+                }
+            });
+        }
+
+        function removeTaskFromLocalStorage(title) {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks = tasks.filter(task => task.title !== title);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+
+        window.onload = function() {
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            tasks.forEach(task => {
+                addTaskToTable(task);
+            });
+        };
+
+        window.onbeforeunload = function() {
+            const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+            const completedTasks = tasks.filter(task => task.status === 'Completed').length;
+            const pendingTasks = tasks.filter(task => task.status === 'Pending').length;
+            alert(`Summary:\nCompleted Tasks: ${completedTasks}\nPending Tasks: ${pendingTasks}`);
+        };
+    </script>
+
+</body>
+</html>

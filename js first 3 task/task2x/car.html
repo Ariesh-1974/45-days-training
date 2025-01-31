@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Rental</title>
+    <style>
+        .cover {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .fr {
+            background-color: aqua;
+            width: 250px;
+            height: 270px;
+            padding: 30px;
+            border-radius: 20px;
+            align-content: center;
+        }
+        nav {
+            position: absolute;
+            top: 24%;
+            left: 37%;
+        }
+        ul {
+            display: flex;
+            gap: 10px;   
+        }
+        li {
+            list-style: none;
+        }
+        li a {  
+            text-decoration: none;  
+        }
+        input{
+            height:30px;
+            width: 250px;
+            border-radius: 20px;
+            border: none;
+
+        }
+        button{
+            margin-left: 70px;
+            width: 100px;
+            height:30px;
+            border-radius:20px;
+            border: none;
+            
+        }
+        button:hover{
+            background-color: orange;
+        }
+    </style>
+    <script>
+        function switchToAdminForm() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('admin-form').style.display = 'block';
+        }
+
+        function switchToLoginForm() {
+            document.getElementById('admin-form').style.display = 'none';
+            document.getElementById('login-form').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="cover">
+        <div class="fr">
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="switchToAdminForm()">Admin</a></li>
+                    <li><a href="javascript:void(0);" onclick="switchToLoginForm()">Login</a></li>
+                </ul>
+            </nav>
+            <div id="form-container">
+                <div id="login-form">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="username">Username:</label><br><br>
+                        <input type="text" id="username" required><br><br>
+                        <label for="password">Password:</label><br><br>
+                        <input type="password" id="password" required><br><br>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+                <div id="admin-form" style="display: none;">
+                    <h2>Admin Dashboard</h2>
+                    <form>
+                        <label for="admin-username">Admin Username:</label><br><br>
+                        <input type="text" id="admin-username" required><br><br>
+                        <label for="admin-password">Admin Password:</label><br><br>
+                        <input type="password" id="admin-password" required><br><br>
+                        <button type="submit">Admin Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
